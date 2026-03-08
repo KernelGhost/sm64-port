@@ -506,7 +506,7 @@ static void gfx_scegu_set_sampler_parameters(const int tile, const bool linear_f
         gfx_scegu_apply_tmu_state(tile);
 }
 
-static void gfx_scegu_select_texture(int tile, unsigned int texture_id) {
+static void gfx_scegu_select_texture(int tile, uint32_t texture_id) {
     if (tmu_state[tile].tex != texture_id) {
         tmu_state[tile].tex = texture_id;
         texman_bind_tex(texture_id);
