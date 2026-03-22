@@ -43,11 +43,8 @@
 #endif
 
 PSP_MODULE_INFO(MODULE_NAME, 0, 1, 1);
-#if defined(PSP_HEAP_SIZE_MAX)
-PSP_HEAP_SIZE_MAX();
-#elif defined(PSP_HEAP_SIZE_KB)
 PSP_HEAP_SIZE_KB(-1);
-#endif
+PSP_HEAP_THRESHOLD_SIZE_KB(0);
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER | THREAD_ATTR_VFPU);
 
 const char _srcver[] __attribute__((section (".version"), used)) = MODULE_NAME " - " SRC_VER ;
